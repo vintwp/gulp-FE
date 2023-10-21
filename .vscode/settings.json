@@ -14,6 +14,7 @@
   "scss.hover.references": false,
   "html.hover.references": false,
   "editor.fontSize": 13,
+  "linthtml.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": true
   },
