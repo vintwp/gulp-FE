@@ -9,5 +9,6 @@ Features:
 - Creating svg sprites
 - Upload to ftp
 - Linter SCSS with autofix on save
+- Deployment with gh-pages. Link will be https://[nickname].github.io/[repository-name]/
 
 > Based on FreelancerLifeStyle pack
