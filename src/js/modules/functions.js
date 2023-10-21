@@ -1,20 +1,22 @@
 export function isWebp() {
   //  copied from https://fls.guru/gulp.html
 
-  function testWebP(callback) {
-    let webP = new Image();
-  
-    webP.onload = webP.onerror = function () {
-      callback(webP.height == 2);
+  function testWebP(cb) {
+    const webP = new Image();
+
+    webP.onload = webP.onerror = function() {
+      // eslint-disable-next-line n/no-callback-literal
+      cb(webP.height === 2);
     };
-    
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+
+    // eslint-disable-next-line max-len
+    webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
-    
-  testWebP(function (support) {
-    if (support == true) {
+
+  testWebP(function(support) {
+    if (support === true) {
       document.querySelector('body').classList.add('webp');
-    } else{
+    } else {
       document.querySelector('body').classList.add('no-webp');
     }
   });
