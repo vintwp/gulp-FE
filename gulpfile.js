@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 
-import { path } from "./gulp/config/path.js";
+import { path } from './gulp/config/path.js';
 
 import { copy } from './gulp/tasks/copy.js';
 import { reset } from './gulp/tasks/reset.js';
@@ -22,7 +22,7 @@ global.app = {
   path: path,
   gulp: gulp,
   plugins: plugins,
-}
+};
 
 function watcher() {
   gulp.watch(path.watch.files, copy);
@@ -44,10 +44,10 @@ const deployZip = gulp.series(reset, mainTasks, zip);
 const deployFtp = gulp.series(reset, mainTasks, ftp);
 const deployBuild = gulp.series(reset, mainTasks, deploy);
 
-export { dev }
-export { build }
-export { deployZip }
-export { deployFtp }
-export { deployBuild }
+export { dev };
+export { build };
+export { deployZip };
+export { deployFtp };
+export { deployBuild };
 
 gulp.task('default', dev);
